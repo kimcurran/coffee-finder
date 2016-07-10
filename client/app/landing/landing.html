@@ -1,0 +1,105 @@
+<nav class="navbar navbar-default navbar-absolute-top topnav" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand topnav" href="index.html">coffee finder</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#about">about</a>
+        </li>
+        <li>
+          <a href="#locate">locate</a>
+        </li>
+        <li>
+          <a href="#contact">contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+<header>
+  <div class="main-content">
+    <div class="main-content-inner">
+      <h1>starbucks not cutting it?</h1>
+        <a href="#about" class="btn btn-primary btn-xl">get started</a>
+    </div>
+  </div>
+</header>
+    
+<div class="bg-red" id="about">
+  <div class="container">
+    <h1>about</h1>
+  </div>
+</div>
+    
+<div class="bg-img-one">
+  <div class="container">
+  </div>
+</div>
+    
+<div class="bg-white" id="locate">
+  <div class="container">
+    <h1>locate</h1>
+      <form method='form-responses/new' method='POST' onsubmit='input(event);' ng-submit='submit()'>
+        <div class='row'>
+          <div class='col-md-4 text-center'></div>
+          <div class='col-md-4 text-center'>    
+            <div class='form-group'>
+              <label for='neighborhood'>choose neighborhood(s):</label>
+              <br>
+                <select id='neighborhood' data-placeholder='Select Neighborhood(s)' multiple>
+                  <option value="richmond">richmond</option>
+                  <option value="sunset">sunset</option>
+                  <option value="nopa">nopa</option>
+                  <option value="pac heights">pac heights</option>
+                  <option value="hayes valley">hayes valley</option>
+                  <option value="marina">marina</option>
+                  <option value="russian hill">russian hill</option>
+                  <option value="haight ashbury">haight ashbury</option>
+                  <option value="nob hill">nob hill</option>
+                  <option value="north beach">north beach</option>
+                  <option value="financial district">financial district</option>
+                  <option value="soma">soma</option>
+                  <option value="mission bay">mission bay</option>
+                  <option value="potrero hill">potrero hill</option>
+                  <option value="dogpatch">dogpatch</option>
+                  <option value="mission">mission</option>
+                  <option value="castro">castro</option>
+                </select>
+            </div>
+          </div>
+          <div class='col-md-4 text-center'></div>
+        </div>
+        <input type='submit' class='btn btn-primary' value='submit'>
+      </form>
+  </div>
+</div>
+    
+<div class="bg-red" id="map">
+  <div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98568954368!2d-122.50781199608218!3d37.75781489506151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1459808739702" width="100%" height="450" frameborder="0"></iframe>
+  </div>
+</div>
+
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-inline social-buttons">
+          <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+		  <li><a href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
