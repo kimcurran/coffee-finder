@@ -1,0 +1,20 @@
+<div class="container">
+  <div ng-include="'app/partials/header.html'"></div>
+  <button type="button" ng-click="getCoffee()" ng-hide="clicked">get started</button>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div id="results" class="col-6-sm"></div>
+    <div id="boxes" class="col-6-sm">
+    <div id="result-boxes" ng-show="coffeeShops" ng-repeat="shop in coffeeShops">
+      <img class="favorite-icon" src="{{shop.state ? '../app/assets/favorited.png' : '../app/assets/favorite.png'}}" ng-click="favoriteMarker(shop.name); shop.state = !shop.state" ng-class="{'favorited' : shop.state}">
+      <h3>{{shop.name}}</h3>
+      <h4>{{shop.vicinity}}</h4>
+      <h5 ng-class="{open: shop.opening_hours.open_now === true, closed: shop.opening_hours.open_now !== true}"=>{{ shop.opening_hours.open_now ? 'Open' : 'Closed' }}</h5>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include="'app/partials/footer.html'"></div>
