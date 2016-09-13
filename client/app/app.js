@@ -13,10 +13,10 @@ angular.module('coffee-finder', ['ngRoute'])
   $scope.markers = [];
 
   $scope.favoriteMarker = function(address) {
-    if ($scope.markers[address].icon === 'http://maps.google.com/mapfiles/ms/icons/red-dot.png') {
-      $scope.markers[address].setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+    if ($scope.markers[address].icon === 'https://maps.google.com/mapfiles/ms/icons/red-dot.png') {
+      $scope.markers[address].setIcon('https://maps.google.com/mapfiles/ms/icons/blue-dot.png');
     } else {
-      $scope.markers[address].setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+      $scope.markers[address].setIcon('https://maps.google.com/mapfiles/ms/icons/red-dot.png');
     }
   };
 
@@ -69,7 +69,7 @@ angular.module('coffee-finder', ['ngRoute'])
   	    $scope.markers[place.vicinity] = new google.maps.Marker({
   	      map: map,
   	      position: place.geometry.location,
-  	      icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+  	      icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
   	    });
         var infoWindow = new google.maps.InfoWindow({
           content: place.name
