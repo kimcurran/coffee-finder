@@ -12,11 +12,11 @@ angular.module('coffee-finder', ['ngRoute'])
   $scope.coffeeShops = [];
   $scope.markers = [];
 
-  $scope.favoriteMarker = function(name) {
-  	if ($scope.markers[name].icon === 'http://maps.google.com/mapfiles/ms/icons/red-dot.png') {
-      $scope.markers[name].setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+  $scope.favoriteMarker = function(address) {
+    if ($scope.markers[address].icon === 'http://maps.google.com/mapfiles/ms/icons/red-dot.png') {
+      $scope.markers[address].setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
     } else {
-      $scope.markers[name].setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+      $scope.markers[address].setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
     }
   };
 
@@ -66,7 +66,7 @@ angular.module('coffee-finder', ['ngRoute'])
   	  };
 
   	  function createMarker(place) {
-  	    $scope.markers[place.name] = new google.maps.Marker({
+  	    $scope.markers[place.vicinity] = new google.maps.Marker({
   	      map: map,
   	      position: place.geometry.location,
   	      icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
@@ -74,11 +74,11 @@ angular.module('coffee-finder', ['ngRoute'])
         var infoWindow = new google.maps.InfoWindow({
           content: place.name
         });
-  	    $scope.markers[place.name].addListener('mouseover', function() {
-  	      infoWindow.open(map, $scope.markers[place.name]);
+  	    $scope.markers[place.vicinity].addListener('mouseover', function() {
+  	      infoWindow.open(map, $scope.markers[place.vicinity]);
   	    });
-  	    $scope.markers[place.name].addListener('mouseout', function() {
-  	      infoWindow.close(map, $scope.markers[place.name]);
+  	    $scope.markers[place.vicinity].addListener('mouseout', function() {
+  	      infoWindow.close(map, $scope.markers[place.vicinity]);
   	    });
   	  };
   	};
