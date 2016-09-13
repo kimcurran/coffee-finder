@@ -4,7 +4,8 @@
   "description": "find coffee near you",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,6 @@
   },
   "homepage": "https://github.com/kimcurran/coffee-finder#readme",
   "dependencies": {
-    "bower": "^1.7.9",
     "express": "^4.14.0"
   }
 }
