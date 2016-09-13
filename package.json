@@ -4,7 +4,7 @@
   "description": "find coffee near you",
   "main": "index.js",
   "scripts": {
-    "test": "node server/index.js"
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
