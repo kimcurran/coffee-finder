@@ -54,7 +54,6 @@ angular.module('coffee-finder', ['ngRoute'])
   	    if (status == google.maps.places.PlacesServiceStatus.OK) {
   	      $scope.$apply(function(){
   	      	$scope.coffeeShops = results;
-  	      	console.log($scope.coffeeShops);
   	      });
   	      for (var i = 0; i < results.length; i++) {
   	        createMarker(results[i]);
