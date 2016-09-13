@@ -8,7 +8,7 @@ angular.module('coffee-finder', ['ngRoute'])
     });
 })
 .controller('MainController', ['$scope', '$http', function($scope, $http) {
-  $scope.clicked = false;
+  $scope.loading = false;
   $scope.coffeeShops = [];
   $scope.markers = [];
 
@@ -21,7 +21,7 @@ angular.module('coffee-finder', ['ngRoute'])
   };
 
   $scope.getCoffee = function() {
-  	$scope.clicked = true;
+  	$scope.loading = true;
 
   	if (navigator.geolocation) {
   	  navigator.geolocation.getCurrentPosition(displayPosition, errorFunction);
@@ -58,6 +58,9 @@ angular.module('coffee-finder', ['ngRoute'])
   	      for (var i = 0; i < results.length; i++) {
   	        createMarker(results[i]);
   	      }
+          $scope.$apply(function(){
+            $scope.loading = false;
+          });
   	    }
   	  };
 
