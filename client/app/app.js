@@ -43,7 +43,8 @@ angular.module('coffee-finder', ['ngRoute'])
   	  var request = {
   	    location: latlng,
   	    radius: 1000,
-  	    type: ['cafe']
+  	    type: ['cafe'],
+        query: 'coffee'
   	  };
 
   	  var service = new google.maps.places.PlacesService(map);
